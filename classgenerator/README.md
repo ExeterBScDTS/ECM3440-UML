@@ -37,6 +37,8 @@ Unit tests should be simple, test just one thing, and *cheap*, very quick to run
 
 Unit tests ensure individual functions behave as expected, but do not test other important aspects of the code base.
 
+Using fixtures <https://docs.pytest.org/en/6.1.1/fixture.html>
+
 ### Mocking
 
 <https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a>
