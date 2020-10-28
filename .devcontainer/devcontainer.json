@@ -34,6 +34,7 @@
 		"GitHub.vscode-pull-request-github",
 		"ms-python.python",
 		"littlefoxteam.vscode-python-test-adapter",
+		"ryanluker.vscode-coverage-gutters"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
