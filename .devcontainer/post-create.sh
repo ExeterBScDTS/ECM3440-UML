@@ -3,4 +3,4 @@ sudo apt update
 sudo apt install -y graphviz
 
 # Python project requirements
-pip3 install --user -r test-requirements.txt
+python3.8 -m pip install --user -r test-requirements.txt
