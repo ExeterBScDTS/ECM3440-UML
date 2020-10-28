@@ -12,6 +12,3 @@ class PythonTemplate:
 '''
         return text
 
-if __name__ == '__main__':
-    t = PythonTemplate()
-    print(t.class_defn('PythonTemplate'))
