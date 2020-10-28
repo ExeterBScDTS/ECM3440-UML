@@ -2,6 +2,7 @@ from sys import argv
 import json
 import os
 from python_template import PythonTemplate
+from puml_template import PUMLTemplate
 from name_case import NameCase 
 
 class Parser:
@@ -22,13 +23,19 @@ class Parser:
             exit("Error: output directory exists")
 
         t = PythonTemplate()
-        for cl in data:
-            #print(cl['class'])  
+        p = PUMLTemplate()
+        puml_file = open(output_dirname + '/class.puml', 'w')
+        puml_file.write(p.header())
+        for cl in data: 
             classname = cl['class']
             filename = output_dirname + '/' + NameCase.to_py_name(classname)
             
             with open(filename, 'w') as outfile:
                 outfile.write(t.class_defn(classname))
+
+            puml_file.write(p.class_defn(classname))
+        puml_file.write(p.footer())
+
 
 if __name__ == '__main__':
     p = Parser(argv)
